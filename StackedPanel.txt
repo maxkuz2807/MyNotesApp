@@ -1,0 +1,52 @@
+﻿<Grid Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"
+              Name="Panel">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="180"/>
+                <!--<ColumnDefinition Width="180"/>-->
+            </Grid.ColumnDefinitions>
+            
+            <ComboBox
+                Name="themeColors"
+                Grid.Column="0"
+                Width="150" Height="40"
+                Foreground="White" Background="Green"
+                IsEditable="True" IsReadOnly="True"
+                Text="Цвет интерфейса"
+                FontSize="14">
+                
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                            <TextBlock Text="{Binding Name}" Foreground="Black"/>
+                        </StackPanel>
+                    </DataTemplate>                    
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!--<ComboBox
+                Grid.Column="1"
+                Width="150" Height="40"
+                Foreground="White" Background="Green"
+                IsEditable="True" IsReadOnly="True"
+                Name="noteCategories" Text="Категории"
+                FontSize="14"
+                ItemsSource="{Binding cat_list}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding cat_list}" Foreground="Black"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>-->
+
+            <Button
+                Grid.Column="3"
+                Width="150" Height="40"
+                Foreground="White" Background="Green"
+                Name="insertImage" Content="Вставить фото"
+                FontSize="14">
+            </Button>
+        </Grid>
